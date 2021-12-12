@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="modeList">
+        <item>Hiking</item>
+        <item>Biking</item>
+        <item>Backpacking</item>
+    </string-array>
+</resources>

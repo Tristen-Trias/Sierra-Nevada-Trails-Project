@@ -1,0 +1,2 @@
+rootProject.name = "SierraNevadaTrails Project"
+include ':app'

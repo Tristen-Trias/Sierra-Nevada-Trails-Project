@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav"
+    app:startDestination="@id/login">
+
+    <fragment
+        android:id="@+id/login"
+        android:name="com.example.sierranevadatrailsproject.login"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/loginToTrails"
+            app:destination="@id/trails" />
+        <action
+            android:id="@+id/loginToCreate"
+            app:destination="@id/createAccount" />
+    </fragment>
+    <fragment
+        android:id="@+id/trails"
+        android:name="com.example.sierranevadatrailsproject.trails"
+        android:label="fragment_trails2"
+        tools:layout="@layout/fragment_trails" >
+        <action
+            android:id="@+id/trailsToInventory"
+            app:destination="@id/inventory" />
+        <action
+            android:id="@+id/trailsToSettings"
+            app:destination="@id/settings" />
+        <action
+            android:id="@+id/trailsToTrailInfo"
+            app:destination="@id/trailinformation" />
+        <action
+            android:id="@+id/trailsToLogin"
+            app:destination="@id/login" />
+    </fragment>
+    <fragment
+        android:id="@+id/inventory"
+        android:name="com.example.sierranevadatrailsproject.inventory"
+        android:label="fragment_inventory"
+        tools:layout="@layout/fragment_inventory" >
+        <action
+            android:id="@+id/inventoryToTrails"
+            app:destination="@id/trails" />
+        <action
+            android:id="@+id/inventoryToAddItem"
+            app:destination="@id/addItem" />
+    </fragment>
+    <fragment
+        android:id="@+id/addItem"
+        android:name="com.example.sierranevadatrailsproject.addItem"
+        android:label="fragment_add_item"
+        tools:layout="@layout/fragment_add_item" >
+        <action
+            android:id="@+id/addItemToInventory"
+            app:destination="@id/inventory" />
+    </fragment>
+    <fragment
+        android:id="@+id/settings"
+        android:name="com.example.sierranevadatrailsproject.settings"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" >
+        <action
+            android:id="@+id/settingsToTrails"
+            app:destination="@id/trails" />
+    </fragment>
+    <fragment
+        android:id="@+id/trailinformation"
+        android:name="com.example.sierranevadatrailsproject.trailinformation"
+        android:label="fragment_trailinformation"
+        tools:layout="@layout/fragment_trailinformation" >
+        <action
+            android:id="@+id/trailInfoToTrails"
+            app:destination="@id/trails" />
+    </fragment>
+    <fragment
+        android:id="@+id/createAccount"
+        android:name="com.example.sierranevadatrailsproject.createAccount"
+        android:label="fragment_create_account"
+        tools:layout="@layout/fragment_create_account" >
+        <action
+            android:id="@+id/createAccountToLogin"
+            app:destination="@id/login" />
+        <action
+            android:id="@+id/createAccountToTrails"
+            app:destination="@id/trails" />
+    </fragment>
+</navigation>
